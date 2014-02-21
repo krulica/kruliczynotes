@@ -2,6 +2,7 @@
 
 traycyjnie do sklepu wchodziny z koszykiem lub wiaderkiem ;-)
 *hello world*: (skąd to się wzięło?) [hello world program] (http://pl.wikipedia.org/wiki/Hello_world)
+oto, co o tym myślę ![grfield] (http://www.mezzacotta.net/garfield/?comic=1035)
 
 ```c
 include <stdio.h>
