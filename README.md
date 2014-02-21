@@ -1,4 +1,4 @@
-kruliczynotes
-=============
+## Pierwsze wynurzenia w C
 
-smętne wynurzenia studentki pspi
+traycyjnie do sklepu wchodziny z koszykiem lub wiaderkiem ;-)
+*hello world*:
