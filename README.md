@@ -11,3 +11,7 @@ int main() {
   return 0;
 }
 ```
+W niedzielę:
+1. Porozmawiać o github desktop
+2. Powtórka notacji Markdown.
+3. Markdown online.
