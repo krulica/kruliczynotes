@@ -254,6 +254,7 @@ int main(){
 	return 0;
 }
 
+zad10
 #include<stdio.h>
 #include<math.h>
 int main(){
@@ -267,3 +268,24 @@ int main(){
 	}
 	return 0;
 }
+
+zad11
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(){
+	srand(time(NULL));
+	int x,y,wynik;
+	x=rand()%11;
+	y=rand()%11;
+	printf("Ile jest %d razy %d? ", x,y);
+	scanf("%d", &wynik);
+	while(x*y!=wynik){
+	printf("Sprobuj jeszcze raz!\n");
+	scanf("%d", &wynik);
+	}
+	printf("Bardzo dobrze!");
+	return 0;
+}
+
+
