@@ -288,4 +288,20 @@ int main(){
 	return 0;
 }
 
-
+Zad11b
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(){
+	srand(time(NULL));
+	int x,y,wynik,i,pkt=0;
+	for(i=1; i<=10; i++){
+	x=rand()%11;
+	y=rand()%11;
+	printf("Ile jest %d razy %d? ", x,y);
+	scanf("%d", &wynik);
+	if(x*y==wynik) pkt++;
+	}
+	printf("Ocena:%d", pkt/2);
+	return 0;
+}
