@@ -305,3 +305,31 @@ int main(){
 	printf("Ocena:%d", pkt/2);
 	return 0;
 }
+
+Zad 12
+
+#include<stdio.h>
+int main(){
+	int n,dziel,suma=0;
+	printf("Podaj liczbe:\n");
+	scanf("%d", &n);
+		for(dziel=n-1; dziel>0; dziel--){
+			if (n%dziel==0) suma=suma+dziel;
+		}
+		if(suma==n) printf("Ta liczba jest liczba doskonala!\n");
+		else printf("Ta liczba nie jest liczba doskonala!\n");
+	return 0;
+}
+		
+Zad12b in progress
+
+#include<stdio.h>
+int main(){
+	int licz,dziel,suma=0;
+	for(licz=1; licz<=10000; licz++){
+		for(dziel=licz-1; dziel>0; dziel--){
+			if (licz%dziel==0) suma=suma+dziel;
+				if (suma==licz) printf("%d", licz)
+		}
+	}
+}
