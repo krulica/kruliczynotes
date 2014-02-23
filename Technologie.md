@@ -6,7 +6,7 @@
 
 ### Jezyk C
 
-[Denis Rtchie] (http://pl.wikipedia.org/wiki/Plik:Dennis_MacAlistair_Ritchie.jpg)
+![Denis Rtchie] (http://pl.wikipedia.org/wiki/Plik:Dennis_MacAlistair_Ritchie.jpg)
 
 traycyjnie do sklepu wchodziny z koszykiem lub wiaderkiem ;-)
 *hello world*: (skąd to się wzięło?) [hello world program] (http://pl.wikipedia.org/wiki/Hello_world)
