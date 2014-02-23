@@ -20,7 +20,7 @@ int main() {
 }
 ```
 
-W niedzielę:
+####W niedzielę:
 
 1. Porozmawiać o github desktop
 2. Powtórka notacji Markdown.
