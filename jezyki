@@ -329,7 +329,8 @@ int main(){
 	for(licz=1; licz<=10000; licz++){
 		for(dziel=licz-1; dziel>0; dziel--){
 			if (licz%dziel==0) suma=suma+dziel;
-				if (suma==licz) printf("%d", licz)
+				if (suma==licz) printf("%d", licz);
 		}
 	}
+return 0;
 }
