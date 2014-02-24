@@ -1,5 +1,5 @@
-#22.02.2014
-##Rozwiązane zadania
+#*22.02.2014*
+##*Rozwiązane zadania*
 
 ###Dodawanie
 
@@ -320,6 +320,9 @@ int main(){
 return 0;
 }
 ```
+
+##*23.02.2014*
+
 
 ###Zadanie 11b
 
