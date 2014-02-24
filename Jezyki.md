@@ -110,3 +110,67 @@ int main(){
     return 0;
 }
 ```
+
+###Zadanie 2
+
+```
+//#include<stdio.h>
+//main(){
+//  float licz, step=0.5;
+//  for (licz=-3.5; licz<=7.5; licz=licz+step){
+//  printf ("%f\n",licz);
+//  }
+//return 0;
+//}
+
+#include<stdio.h>
+main(){
+    float licz=-3.5, step=0.5;
+    while (licz<=7.5){
+    printf("%f\n",licz);
+    licz=licz+step;
+    }
+return 0;
+}
+```
+
+###Zadanie 3
+
+```
+//#include<stdio.h>
+//int main(){
+//  int a,licz;
+//  printf("Podaj liczbe:\n");
+//  scanf("%d", &licz);
+//  for(a=1; a<=licz; a++){
+//      printf ("%d %d\n",a*a,a*a*a);
+//  }
+//return 0;
+//
+//}
+
+//#include<stdio.h>
+//int main(){
+//  int a=1,licz;
+//  printf("podaj liczbe:\n");
+//  scanf("%d", &licz);
+//  while (a<=licz){
+//      printf ("%d %d\n",a*a,a*a*a);
+//      a++;
+//  }
+//return 0;
+//}
+
+#include<stdio.h>
+int main(){
+int a=1,licz;
+printf("podaj liczbe:\n");
+scanf("%d", &licz);
+    do {
+        printf ("%d %d\n",a*a,a*a*a);
+        a++;
+    }
+    while (a<=licz);
+return 0;
+}
+```
