@@ -246,4 +246,78 @@ int main(){
         printf("%c, %d, %x\n", i,i,i);
     }
     return 0;
+}
+
+```
+
+###Zadanie 8
+
+```
+#include<stdio.h>
+main(){
+    int znak;
+
+    printf("Podaj ciąg znakow:\n");
+    while ((znak=getchar())!='x'){
+        putchar (znak);
     }
+return 0;
+}
+```
+
+###Zadanie 9
+
+```
+#include<stdio.h>
+int main(){
+    int liczba,mnoznik,i;
+
+    for(liczba=1;liczba<=13;liczba++){
+        for (i=1; i<=13; i++){
+            printf("%d*%d=%d \n", liczba,i,liczba*i);
+        }
+    }
+return 0;
+}
+```
+
+###Zadanie 10
+
+```
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int a,b,c;
+    for(a=3; a<=100; a++){
+        for(b=4; b<=100; b++){
+            for(c=5; c<=100; c++){
+                if (a*a+b*b==c*c &&a>b) printf("%d,%d,%d\n", a,b,c);
+            }
+        }
+    }
+return 0;
+}
+```
+
+###Zadanie 11
+
+```
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(){
+    srand(time(NULL));
+    int x,y,wynik;
+    x=rand()%11;
+    y=rand()%11;
+    printf("Ile jest %d razy %d? ", x,y);
+    scanf("%d", &wynik);
+        while(x*y!=wynik){
+            printf("Sprobuj jeszcze raz!\n");
+            scanf("%d", &wynik);
+        }
+        printf("Bardzo dobrze!");
+return 0;
+}
+
+
