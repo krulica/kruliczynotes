@@ -174,3 +174,40 @@ scanf("%d", &licz);
 return 0;
 }
 ```
+
+###Zadanie 4
+
+```
+#include<stdio.h>
+int suma=0,kwadrat,liczba=3;
+int main(){
+    //for(liczba=3; liczba<=15; liczba++){
+        // kwadrat=liczba*liczba;
+        // suma=suma+kwadrat;
+    //}
+
+    while (liczba<=15){
+        kwadrat=liczba*liczba;
+        suma=suma+kwadrat;
+        liczba++;
+    }
+
+    printf("Suma kwadratow liczb od 3 do 15 to:%d", suma);
+    return 0;
+}
+```
+
+###Zadanie 5
+```
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int kat,krok=30;
+    for(kat=0; kat<=180; kat=kat+krok){
+        printf("sinus %d:%lf\n", kat,sin(kat*M_PI/180));
+        printf("cosinus %d: %lf\n", kat,cos(kat*M_PI/180));
+
+    }
+return 0;
+}
+```
