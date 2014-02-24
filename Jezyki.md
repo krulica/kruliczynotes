@@ -163,9 +163,9 @@ return 0;
 
 #include<stdio.h>
 int main(){
-int a=1,licz;
-printf("podaj liczbe:\n");
-scanf("%d", &licz);
+    int a=1,licz;
+    printf("podaj liczbe:\n");
+    scanf("%d", &licz);
     do {
         printf ("%d %d\n",a*a,a*a*a);
         a++;
@@ -179,8 +179,8 @@ return 0;
 
 ```
 #include<stdio.h>
-int suma=0,kwadrat,liczba=3;
 int main(){
+    int suma=0,kwadrat,liczba=3;
     //for(liczba=3; liczba<=15; liczba++){
         // kwadrat=liczba*liczba;
         // suma=suma+kwadrat;
@@ -198,6 +198,7 @@ int main(){
 ```
 
 ###Zadanie 5
+
 ```
 #include<stdio.h>
 #include<math.h>
@@ -211,3 +212,38 @@ int main(){
 return 0;
 }
 ```
+
+###Zadanie 6
+
+```
+#include<stdio.h>
+int main(){
+    int liczba,suma=0,i,wyraz;
+    double srednia;
+    printf("Podaj dlugosc ciagu\n");
+    scanf("%d", &liczba);
+    for (i=1; i<=liczba; i++){
+        printf("Podaj %d wyraz ciagu\n", i);
+        scanf("%d", &wyraz);
+        suma=suma+wyraz;
+        }
+        printf("Suma wyrazow ciagu to:%d\n", suma);
+        printf("Srednia arytmetyczna wyrazow ciagu to:%lf", (double)suma/liczba);
+    return 0;
+}
+```
+
+###Zadanie 7
+
+```
+#include<stdio.h>
+int main(){
+    int dzies,szes,i;
+    for(i=97; i<=107; i++){
+        printf("%c, %d, %x\n", i,i,i);
+    }
+    for(i=107; i>=97; i--){
+        printf("%c, %d, %x\n", i,i,i);
+    }
+    return 0;
+    }
