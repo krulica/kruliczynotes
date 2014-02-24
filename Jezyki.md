@@ -6,16 +6,16 @@
 ```
 #include <stdio.h>
     main(){
-    int a,b;
-    printf("Podaj dwie liczby\n");
-    scanf("%d %d",&a, &b);
-    printf("%d+%d=%d\n",a,b,a+b);
-    printf("%d-%d=%d\n",a,b,a-b);
-    printf("%d*%d=%d\n",a,b,a*b);
-    printf("%d/%d=%lf\n",a,b,(double)a/b);
-    getchar();getchar();
-    return 0;
-  }
+        int a,b;
+        printf("Podaj dwie liczby\n");
+        scanf("%d %d",&a, &b);
+        printf("%d+%d=%d\n",a,b,a+b);
+        printf("%d-%d=%d\n",a,b,a-b);
+        printf("%d*%d=%d\n",a,b,a*b);
+        printf("%d/%d=%lf\n",a,b,(double)a/b);
+        getchar();getchar();
+        return 0;
+      }
 ```
 
 ###Konwertowanie stopni
@@ -58,23 +58,23 @@ return 0;
 #include<stdio.h>
 #define znak '*'
 
-main(){
-int lbwier; //liczba
-int lw; //licznik
-int lodst;
-int j;
+    main(){
+        int lbwier; //liczba
+        int lw; //licznik
+        int lodst;
+        int j;
 
-printf ("ile wierszy?");
-scanf ("%d", &lbwier);
+        printf ("ile wierszy?");
+        scanf ("%d", &lbwier);
 
-for (lw=0; lw<lbwier; lw++){
-lodst=lbwier-lw-1;
-for(j=0; j<lodst; j++) putchar (' ');
-for(j=0; j<2*lw+1; j++) putchar (znak);
-putchar('\n');
-}
+        for (lw=0; lw<lbwier; lw++){
+            lodst=lbwier-lw-1;
+                for(j=0; j<lodst; j++) putchar (' ');
+                    for(j=0; j<2*lw+1; j++) putchar (znak);
+                    putchar('\n');
+        }
 
-}
+    }
 ```
 
 ###Zadanie 1
@@ -82,31 +82,31 @@ putchar('\n');
 ```
 //#include<stdio.h>
 //int main(){
-// int calk;
-// for (calk=0;calk<=32;calk=calk+1){
-// printf("%d\n",calk);
-// }
+//  int calk;
+//  for (calk=0;calk<=32;calk=calk+1){
+//  printf("%d\n",calk);
+//  }
 // return 0;
 //}
 
 //#include<stdio.h>
 //int main(){
-// int calk=0;
-// while (calk<=32){
-// printf("%d\n",calk);
-// calk++;
-// }
-// return 0;
+//  int calk=0;
+//  while (calk<=32){
+//  printf("%d\n",calk);
+//  calk++;
+//  }
+//return 0;
 //}
 
 #include<stdio.h>
 int main(){
-int calk=0;
-do{
-printf("%d\n",calk);
-calk++;
-}
-while (calk<=32);
-return 0;
+    int calk=0;
+    do{
+        printf("%d\n",calk);
+        calk++;
+    }
+    while (calk<=32);
+    return 0;
 }
 ```
