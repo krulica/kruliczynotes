@@ -319,5 +319,25 @@ int main(){
         printf("Bardzo dobrze!");
 return 0;
 }
+```
 
+###Zadanie 11b
 
+```
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(){
+    srand(time(NULL));
+    int x,y,wynik,i,pkt=0;
+    for(i=1; i<=10; i++){
+        x=rand()%10+1;
+        y=rand()%10+1;
+        printf("Ile jest %d razy %d? ", x,y);
+        scanf("%d", &wynik);
+        if(x*y==wynik) pkt++;
+    }
+    printf("Ocena:%d", pkt/2);
+return 0;
+}
+```
