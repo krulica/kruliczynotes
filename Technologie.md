@@ -1,7 +1,7 @@
 ## PSPI
 
 1. [Miklaszewski] (
-2. [Gnacinski] (jezyki.md)
+2. [Gnacinski] (Jezyki.md)
 3. 
 
 ### Jezyk C
