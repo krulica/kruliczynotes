@@ -463,3 +463,25 @@ double pierwiosnek(double a){
 		printf("Pierwiastek liczby %lf wynosi %lf", a,pierwiosnek(a));
 	}
 ```
+
+```
+#include<stdio.h>
+#include<math.h>
+
+double pierwiosnek(double a){
+	double x=1, eps=1e-8;
+	do {
+	x=0.5*(x+a/x);}
+	while ((fabs(x-(a/x)))>=eps*x);	
+	return (x);
+}
+	int main(){
+		double a;
+		printf("Podaj liczbe:\n");
+		scanf("%lf", &a);
+		printf("Pierwiastek liczby %lf wynosi %lf\n", a,pierwiosnek(a));
+		printf("Pierwiastek wg funkcji bibliotecznej %lf\n", sqrt(a));
+		printf("Blad wzgledny wynosi %le", (fabs(sqrt(a)-(pierwiosnek(a)))/sqrt(a)));
+		
+	}
+```
