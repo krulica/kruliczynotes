@@ -533,3 +533,31 @@ int main(){
 }	
 	
 ```
+
+### Potegowanie2
+
+```
+#include<stdio.h>
+#include<stdio.h>
+
+double potegowanie(double a, int n){
+	double p=1, q=a;
+	int i;
+	for (i=n; i!=0; i=i/2){
+		if ((i%2)!=0) p=p*q, q=q*q;
+		else q=q*q;
+	}
+	if (n<0) return (1/p);
+	else return (p);
+	}
+int main(){
+	double a;
+	int n;
+	printf("Podaj liczbe:\n");
+	scanf("%lf", &a);
+	printf("Podaj wykladnik:\n");
+	scanf("%d", &n);
+	printf("%lf do potegi %d wynosi %lf", a,n,potegowanie(a,n));
+		
+}	
+```
