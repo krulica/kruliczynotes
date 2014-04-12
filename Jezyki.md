@@ -441,4 +441,25 @@ int potega(int a, unsigned int n){
 		scanf("%u", &n);
 		printf ("%d do potegi %u wynosi %d", a, n, potega(a,n));
 	}
-	```
+```
+
+###Pierwiosnek
+
+```
+#include<stdio.h>
+#include<math.h>
+
+double pierwiosnek(double a){
+	double x=a/3, eps=1e-8;
+	do {
+	x=((x+a/x)/2);}
+	while ((fabs(x-(a/x)))>=eps);	
+	return (x);
+}
+	int main(){
+		double a;
+		printf("Podaj liczbe:\n");
+		scanf("%lf", &a);
+		printf("Pierwiastek liczby %lf wynosi %lf", a,pierwiosnek(a));
+	}
+```
