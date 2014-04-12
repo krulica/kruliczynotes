@@ -485,3 +485,51 @@ double pierwiosnek(double a){
 		
 	}
 ```
+
+```
+#include<stdio.h>
+#include<math.h>
+
+double pierwiosnek(double a){
+	double x=1, eps=1e-8;
+	do {
+	x=0.5*(x+a/x);}
+	while ((fabs(x-(a/x)))>=eps*x);	
+	return (x);
+}
+	int main(){
+		double a;
+		printf("Podaj liczbe:\n");
+		scanf("%lf", &a);
+		printf("Pierwiastek liczby %lf wynosi %lf\n", a,pierwiosnek(a));
+		printf("Pierwiastek wg funkcji bibliotecznej %lf\n", sqrt(a));
+		printf("Blad wzgledny wynosi %le", (fabs(sqrt(a)-(pierwiosnek(a)))/sqrt(a)));
+		
+	}
+```
+
+###Potegowanie
+
+```
+#include<stdio.h>
+#include<stdio.h>
+
+int potegowanie(int a, int n){
+	int p=1, q=a, i;
+	for (i=n; i>0; i=i/2){
+		if ((i%2)!=0) p=p*q, q=q*q;
+		else q=q*q;
+	}
+	return (p);
+	}
+int main(){
+	int a,n;
+	printf("Podaj liczbe:\n");
+	scanf("%d", &a);
+	printf("Podaj wykladnik:\n");
+	scanf("%d", &n);
+	printf("%d do potegi %d wynosi %d", a,n,potegowanie(a,n));
+		
+}	
+	
+```
