@@ -561,3 +561,31 @@ int main(){
 		
 }	
 ```
+
+### E do x
+
+```
+#include<stdio.h>
+#include<math.h>
+
+double edoix(double x){
+	double eps=1e-8, wyraz=1, suma=0;
+	int i=1;
+	
+	while ((fabs(wyraz))>eps){
+	wyraz=((wyraz)*(x/i));
+	suma=(suma+wyraz);
+	i++;
+	}
+	return (suma);
+}
+
+int main(){
+	double x;
+	printf("Podaj x:\n");
+	scanf("%lf", &x);
+	printf("Wynik:%lf\n", edoix(x));
+	printf("Wynik funkcji bibliotecznej:%lf\n", exp(x));
+	printf("Blad wzgledny wynosi:%le", fabs((exp(x)-edoix(x))/exp(x)));
+}
+```
