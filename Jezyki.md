@@ -589,3 +589,39 @@ int main(){
 	printf("Blad wzgledny wynosi:%le", fabs((exp(x)-edoix(x))/exp(x)));
 }
 ```
+
+```
+#include<stdio.h>
+#include<math.h>
+
+double edoix(double x){
+	double eps=1e-8, wyraz=1, suma=1;
+	int i=1, plus=1;
+	
+	if (x<0){ plus=0; x=fabs(x);}
+	while ((fabs(wyraz))>=eps){
+	wyraz=((wyraz)*(x/i));
+	suma=(suma+wyraz);
+	i++;
+	}
+	if (plus==0)return (1/suma);
+	else return (suma);
+}
+
+//int main(){
+//	double x;
+//	printf("Podaj x:\n");
+//	scanf("%lf", &x);
+//	printf("Wynik:%lf\n", edoix(x));
+//	printf("Wynik funkcji bibliotecznej:%lf\n", exp(x));
+//	printf("Blad wzgledny wynosi:%le\n", fabs((exp(x)-edoix(x))/exp(x)));
+	
+main(){
+	double x;
+	for (x=20;x>-50;x=x-5){
+	
+	printf("e^%lf=%lf, blad wzgledny %le\n", x, edoix(x), (edoix(x)-exp(x))/exp(x));
+}
+	return 0;
+}
+```
