@@ -377,3 +377,68 @@ int main(){
 return 0;
 }
 ```
+
+#12.14.2014
+
+###Kula
+
+```
+#include<stdio.h>
+#include<math.h.>
+
+double pole(double r){
+	return((4*M_PI*(r*r)));
+	}
+	
+	int main(){
+		double r;
+		printf ("Podaj promien kuli:\n");
+		scanf ("%lf", &r);
+		printf ("Pole kuli o promieniu %lf to: %lf", r, pole(r));
+			}
+
+```
+
+###Wart Bezwgledna
+
+```
+#include<stdio.h>
+#include<math.h.>
+#include<limits.h>
+
+unsigned int wartBezwzgledna(int n){
+	if (n<0) return (-n);
+	else return (n);
+	}
+	int main(){
+		int n;
+		printf("Podaj liczbe calkowita:\n");
+		scanf("%d", &n);
+		n=INT_MIN;
+		printf("Watrosc bezwzgledna tej liczby to:%u", wartBezwzgledna(n));
+	}
+```
+
+###Potega
+
+```
+#include<stdio.h>
+#include<math.h>
+
+int potega(int a, unsigned int n){
+	int i, wynik=1;
+	for (i=1.;i<=n; i++){
+		(wynik=wynik*a);
+	}
+	return (wynik);
+}
+	int main(){
+		int a;
+		unsigned int n;
+		printf("Podaj liczbe:");
+		scanf("%d", &a);
+		printf("Podaj potege:");
+		scanf("%u", &n);
+		printf ("%d do potegi %u wynosi %d", a, n, potega(a,n));
+	}
+	```
