@@ -760,3 +760,23 @@ int main (){
 	
 }
 ```
+
+###Podstawa wspak
+
+```
+#include<stdio.h>
+
+
+int main(){
+	char tekst[]={"Tablice to podstawa programowania"};
+	int k;
+	for (k=0;k<sizeof(tekst)/sizeof(tekst[0]);k++){
+		printf("%c", tekst[k]);
+	}
+	printf("\n");
+	for (k=sizeof(tekst)/sizeof(tekst[0])-2;k>=0;k--){
+		printf("%c", tekst[k]);
+	}
+		
+}
+```
