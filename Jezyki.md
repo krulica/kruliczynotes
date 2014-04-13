@@ -782,7 +782,7 @@ int main(){
 ```
 
 ###work in progress
-
+```
 #include<stdio.h>
 #define MAX 128
 
