@@ -780,3 +780,34 @@ int main(){
 		
 }
 ```
+
+###work in progress
+
+#include<stdio.h>
+#define MAX 128
+
+void odKonca(char napis[])
+int k;
+char tmp;
+for (k=sizeof(tekst)/sizeof(tekst[0])-2;k>=0;k--){
+		tmp=napis[k]
+		
+	}
+int main(){
+	char napis[]
+}
+
+
+
+	char tekst[]={"Tablice to podstawa programowania"};
+	int k;
+	for (k=0;k<sizeof(tekst)/sizeof(tekst[0]);k++){
+		printf("%c", tekst[k]);
+	}
+	printf("\n");
+	for (k=sizeof(tekst)/sizeof(tekst[0])-2;k>=0;k--){
+		printf("%c", tekst[k]);
+	}
+		
+}
+```
