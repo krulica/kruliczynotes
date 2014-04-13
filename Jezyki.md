@@ -625,3 +625,21 @@ main(){
 	return 0;
 }
 ```
+
+###Tablice 1
+
+```
+#include<stdio.h>
+
+int main(){
+int dane[7]={-44,5,67,-2,0,23,77};
+int k;
+	for(k=0;k<7;k++){
+	printf("%d\n", dane[k]);
+	}
+	for(k=6;k>=0;k--){
+	printf("%d\n", dane[k]);
+	}
+return 0;
+}
+```
