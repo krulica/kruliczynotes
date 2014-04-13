@@ -681,3 +681,23 @@ int k, x;
 	else printf("W tabeli nie znajduje sie ta liczba\n");
 }
 ```
+
+### Durne Napisy
+
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#define MAX 128
+
+int main(){
+	char tekst[MAX];
+	int k;
+	printf("Wpisz dowolny tekst małymi literami:\n");
+	gets(tekst);
+	
+	for (k=0;k<strlen(tekst);k++){
+		printf ("%c", toupper(tekst[k]));
+	}
+}
+```
