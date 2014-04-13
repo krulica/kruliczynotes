@@ -42,3 +42,29 @@ mean(x)
 min(x)
 max(x)
 ```
+###Całka
+
+```
+format long
+format compact
+clc
+F=@(x) 1./(x.^3-2*x-5);
+F=@(x) x.^x;
+F=@(x) exp(sin(x));
+
+tol=10^(-15)
+
+Q= quadl (F,0,pi/2,tol)
+Q= quad(F,0,pi/2,tol)
+
+
+h=pi/10000000;
+x=0:h:pi/2;
+y=exp(sin(x));
+
+calk=y(1)/2;
+for i=2:length(x)-1;
+       calk=calk+y(i);
+end
+calk=(calk+y(end)/2)*h
+```
