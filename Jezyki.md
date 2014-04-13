@@ -729,3 +729,34 @@ int main (){
 	return 0;
 }
 ```
+### Tablica Srednia
+
+```
+#include<stdio.h>
+#define MAX 128
+
+double srednia(double tablica[], int d){
+double suma=0;
+int i;
+	for (i=0;i<d;i++){
+		suma=suma+tablica[i];
+	}
+	return (suma/d);
+}
+
+int main (){
+	double tablica[MAX];
+	int k, d;
+	double maks;
+	
+	printf("Podaj dlugosc ciagu liczb\n");
+	scanf("%d", &d);
+	
+	for(k=0;k<d;k++){
+	printf("Podaj %d wyraz ciagu\n", k+1);
+	scanf("%lf", & tablica[k]);
+	}
+	printf("Srednia arytmetyczna wyrazow wynosi: %lf", srednia(tablica, d));
+	
+}
+```
