@@ -131,3 +131,14 @@ title ('Funkcje Bessela')
 [y,ix]=min(y1);
 text(x(ix),y,'Minimum\rightarrow','HorizontalAlignment','right')
 ```
+
+###Wykres sinus
+
+```
+x=0:0.2:2*pi;
+plot(x,sin(x));
+grid on
+title('Przykład wykresu:');
+xlabel('x');
+ylabel('sin(x)');
+```
