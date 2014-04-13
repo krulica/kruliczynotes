@@ -68,3 +68,21 @@ for i=2:length(x)-1;
 end
 calk=(calk+y(end)/2)*h
 ```
+###Interpolacja
+
+```
+clc
+format compact
+x=95:10:205
+x1=95:0.1:205;
+y=[85,76,114,143,164,281,306,358,437,470,690,702]
+plot(x,y,'o')
+A=[x',ones(12,1)]
+yb=y'
+z=A\yb
+A*z-yb;
+%y1=z(1)*x1.^2+z(2)*x1+z(3)
+w=polyfit(x,y,1)
+%y1=polyval(w,x1)
+plot(x,y,'o',x1,y1)
+```
