@@ -660,3 +660,24 @@ int k;
 return 0;
 }
 ```
+
+###Tablice 2
+
+```
+#include<stdio.h>
+
+int sprawdz(int dane[], int x){
+	int k;
+	for (k=0;k<7;k++){
+	if (x==dane[k]) return (1);
+	}
+}
+int main(){
+int dane[7]={-44,5,67,-2,0,23,77};
+int k, x;
+	printf("Podaj wartosc x:\n");
+	scanf("%d", &x);
+	if ((sprawdz(dane, x))==1) printf("W tabeli znajduje sie ta liczba\n");
+	else printf("W tabeli nie znajduje sie ta liczba\n");
+}
+```
