@@ -701,3 +701,31 @@ int main(){
 	}
 }
 ```
+
+### Tablica liczb
+
+```
+#include<stdio.h>
+#define MAX 128
+
+int main (){
+	double tablica[MAX];
+	int k, d;
+	double maks;
+	
+	printf("Podaj dlugosc ciagu liczb\n");
+	scanf("%d", &d);
+	
+	for(k=0;k<d;k++){
+	printf("Podaj %d wyraz ciagu\n", k+1);
+	scanf("%lf", & tablica[k]);
+	}
+	
+	maks=tablica[0];
+	for(k=1;k<d;k++){
+		if (maks<tablica[k]) maks=tablica[k];
+	}
+	printf("Najwieksza liczba w ciagu to:%lf", maks);
+	return 0;
+}
+```
