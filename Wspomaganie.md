@@ -104,3 +104,30 @@ w=polyfit(x,y,1)
 %y1=polyval(w,x1)
 plot(x,y,'o',x1,y1)
 ```
+###Funkcje Bessela
+
+```
+clc
+format compact
+x=0:0.2:12;
+y1=Besselj(1,x);
+y2=Besselj(2,x);
+y3=Besselj(3,x);
+
+figure(1)
+subplot(2,2,1)
+
+h=plot(x,y1,x,y2,x,y3);
+
+set(h,'LineWidth',2,{'LineStyle'},{'--';':';'-.'})
+set(h,{'Color'},{'r';'g';'b'})
+
+axis ([0 12 -0.5 1])
+grid on
+
+xlabel ('Czas'); ylabel ('Amplituda')
+legend(h,'1','2','3')
+title ('Funkcje Bessela')
+[y,ix]=min(y1);
+text(x(ix),y,'Minimum\rightarrow','HorizontalAlignment','right')
+```
