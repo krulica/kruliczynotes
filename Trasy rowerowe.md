@@ -16,3 +16,16 @@
 * umożliwia zwiedzenie niesamowitych miejsc, do których nie da się dojechać samochodem.
 
 **Powyższe zalety czynią rower idealnym środkiem transportu na wakacyjne wojaże!**
+
+##Trasy rowerowe w Polsce
+
+###Szlak Mennonitów
+
+<p align="center">
+  <img src="http://wpg.alleycat.pl/img/wps/2271_1.jpg" alt="">
+
+* Długość szlaku: 195 kilometrów
+* Przebieg trasy: Gdańsk - Elbląg
+* Opis: Szlak bogaty w atrakcje krajoznawcze, zabutkowe zabudowania, piękne krajobrazy
+* [Oficjalna strona trasy](http://www.mennonici.powiat-gdanski.pl/?page_id=12)
+
