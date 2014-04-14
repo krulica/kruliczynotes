@@ -38,3 +38,6 @@
 * Przebieg trasy: Hel - Jastarnia - Kuźnica - Chałupy - Władysławowo - Swarzewo - Puck - Żelistrzewo - Mrzezino - Pierwoszyno - Kosakowo - Pogórze - Gdynia - Sopot - Gdańsk
 * Opis: Trasa przebiega przez piękne, nadmorskie krajobrazy, po drodze ciekawe pozostałości fortyfikacji na mierzei helskiej, malownicze porty, zabytkowe kościoły
 
+
+
+
