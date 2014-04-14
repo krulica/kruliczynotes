@@ -25,7 +25,16 @@
   <img src="http://wpg.alleycat.pl/img/wps/2271_1.jpg" alt="">
 
 * Długość szlaku: 195 kilometrów
-* Przebieg trasy: Gdańsk - Elbląg
+* Przebieg trasy: Gdańsk - Wiślina - Wróblewo - Miłocin - Trutnowy - Cedry Wielkie - Leszkowy - Kiezmark - Dwernica - Przemysław - Mikoszewo - Jantar - Rybina - Tujsk - Cyganki - Nowy Dwór Gdański - Orłowo - Lubiszewo - Ostaszewo - Nowa Cerkiew - Palczewo - Boręty - Lichnowy - Trepowy - Nowy Staw - Stogi - Malbork - Królewo - Klecie - Krzyżanowo - Kławki - Szaleniec - Rozgart - Różany - Zwierzno - Markusy - Jezioro - Żurawiec - Tropy Elbląskie - Raczki Elbląskie - Elbląg
 * Opis: Szlak bogaty w atrakcje krajoznawcze, zabutkowe zabudowania, piękne krajobrazy
 * [Oficjalna strona trasy](http://www.mennonici.powiat-gdanski.pl/?page_id=12)
+
+###Trasa z Helu do Gdańska
+
+<p align="center">
+  <img src="http://s3.flog.pl/media/foto/5473554_fortyfikacje-polwyspu-helskiego.jpg" alt="">
+
+* Długość trasy: ok. 100 kilometrów
+* Przebieg trasy: Hel - Jastarnia - Kuźnica - Chałupy - Władysławowo - Swarzewo - Puck - Żelistrzewo - Mrzezino - Pierwoszyno - Kosakowo - Pogórze - Gdynia - Sopot - Gdańsk
+* Opis: Trasa przebiega przez piękne, nadmorskie krajobrazy, po drodze ciekawe pozostałości fortyfikacji na mierzei helskiej, malownicze porty, zabytkowe kościoły
 
