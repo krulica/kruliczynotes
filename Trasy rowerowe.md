@@ -2,6 +2,8 @@
 
 ##Dlaczego rower?
 
+!(http://www.suedtirol.info/mediaObject/smg/images/data/article/basisartikel/Suggestion/Pleasure/file-4788512/resolutions/res-o332x249-p2031010767/file-4788512.jpg)
+
   Jazda na rowerze:
 * poprawia wydolność układu krążenia, 
 * przyspiesza metabolizm,
