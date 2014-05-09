@@ -811,3 +811,39 @@ int main(){
 		
 }
 ```
+
+###Miesiace-zaliczenie
+```
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+#include<string.h>
+#include<time.h>
+#define MAX 128
+
+char months [12] [MAX]={{"January"},{"February"},{"March"},{"April"},{"May"},{"June"},{"July"},{"August"},{"September"},{"October"},{"November"},{"December"}};
+
+char days [31] [MAX]={{" the first"},{" the second"},{" the third"},{" the fourth"},{" the fifth"},{" the sixth"},{" the seventh"},{" the eighth"},{" the ninth"},{" the tenth"},{" the eleventh"},{" the twelfth"},{" the thirteenth"},{" the fourteenth"},{" the fifteenth"},{" the sixteenth"},{" the seventeenth"},{" the eighteenth"},{" the nineteenth"},{" the twentieth"},{" the twenty-first"},{" the twenty-second"},{" the twenty-third"},{" the twenty-fourth"},{" the twenty-fifth"},{" the twenty-sixth"},{" the twenty-seventh"},{" the twenty-eighth"},{" the twenty-ninth"},{" the thirtieth"},{" the thirty-first"} };
+	
+int main(){
+	srand(time(NULL));
+	int m,d,k,pkt;
+	char odp[MAX], model[MAX];
+	printf("Witaj! Ten program odpyta Cie z dat w jezyku angielskim.\n");
+	
+	for (k=1;k<6;k++){
+		m=rand()%10;
+		if (m==1) (d=rand()%27);
+		else if ((m==0)||(m==2)||(m==4)||(m==6)||(m==7)||(m==9)||(m==11)) (d=rand()%30);
+			else d=rand()%29;
+		strcpy(model, months[m]);
+		strcat(model,days[d]);
+		printf("Wpisz po angielsku date (miesiac i dzien) dla %d-%d:\n", m+1,d+1);
+		gets(odp);
+	if (strcmp(model, odp)==0) (pkt=pkt+1), printf("Dobrze!\n");
+	else printf("Zle!\n"); 
+	}
+	printf("Ocena z odpowiedzi:%d", pkt+1);
+
+}
+```
