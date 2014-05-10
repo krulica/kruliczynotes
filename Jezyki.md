@@ -895,3 +895,29 @@ int main(){
 
 }
 ```
+
+###odKonca
+```
+#include<stdio.h>
+#include<string.h>
+#define MAX 128
+
+void odKonca(char napis[]){
+int k,p=0;
+char tmp;
+for (k=strlen(napis)-1;k>p;k--,p++){
+        tmp=napis[k];
+        napis[k]=napis[p];
+        napis[p]=tmp;
+        }
+}
+
+int main(){
+    char napis[MAX];
+	printf("Wpisz dowolny tekst:\n");
+	gets(napis);
+	odKonca(napis);
+	puts(napis);
+	
+}
+```
