@@ -942,3 +942,36 @@ int main(){
 	printf("Minimum tablicy to: %le, Maksimum tablicy to: %le", min, Max);
 }
 ```
+###Podziel7
+```
+#include<stdio.h>
+#define MAX 128
+
+int podziel7(int liczby[],int n){
+	int a;
+	a=n;
+	for (a=n; a>=0; a--){
+		if (liczby[a]%7==0) return liczby[a];
+	}
+	return -999;
+}
+
+
+int main(){
+	int liczby[MAX];
+	int n,i,odp;
+	
+	printf("Podaj ilosc liczb: ");
+	scanf("%d", &n);
+	
+	for (i=0;i<n;i++){
+		printf("Podaj %d liczbe", i+1);
+		scanf("%d", & liczby[i]);
+	}
+	odp=podziel7(liczby,n);
+	
+	if (odp==-999) printf("Brak w tablicy liczby podzielnej przez 7");
+	else printf("Ostatnia podzielna przez 7 liczba w tablicy to: %d", odp);
+	
+}
+```
