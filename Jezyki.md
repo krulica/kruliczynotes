@@ -921,3 +921,24 @@ int main(){
 	
 }
 ```
+###Tablica liczb
+```
+#include<stdio.h>
+#define MAX 128
+
+void minMax(double liczby[],int n, double *pmin, double *pMax){
+	*pMax=liczby[0];
+	*pmin=liczby[0];
+	int i;
+	for (i=1;i<n;i++){
+		if (liczby[i]<*pmin) *pmin=liczby[i];
+		if (liczby[i]>*pMax) *pMax=liczby[i];
+	}
+	
+}
+int main(){
+	double min,Max,liczby[]={7,-39,1e13,-17.3e7};
+	minMax(liczby,4,&min,&Max);
+	printf("Minimum tablicy to: %lf, Maksimum tablicy to: %le", min, Max);
+}
+```
