@@ -937,8 +937,8 @@ void minMax(double tab[],int n, double *pmin, double *pMax){
 	
 }
 int main(){
-	double min,Max,liczby[]={7,-39,1e13,-17.3e7};
-	minMax(liczby,4,&min,&Max);
+	double min,Max,tab[]={7,-39,1e13,-17.3e7};
+	minMax(tab,4,&min,&Max);
 	printf("Minimum tablicy to: %le, Maksimum tablicy to: %le", min, Max);
 }
 ```
