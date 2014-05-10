@@ -975,3 +975,40 @@ int main(){
 	
 }
 ```
+
+###IloczynSkalarny
+```
+double iloczynSkalarny(double x[], double y[], int n){
+	double suma=0.0;
+	int i;
+	for (i=0;i<=n;i++){
+		suma=suma+(x[i]*y[i]);
+	}
+	return suma;
+	
+}
+int main(){
+	
+	double x[MAX];
+	double y[MAX];
+	double suma;
+	int n,a;
+	
+	printf("Podaj wymiar wektorow:");
+	scanf("%d", &n);
+	
+	for (a=0;a<=n-1;a++){
+		printf("Podaj %d element wektora x\n", a+1);
+		scanf("%lf", &x[a]);
+	}
+	for (a=0;a<=n-1;a++){
+		printf("Podaj %d element wektora y\n", a+1);
+		scanf("%lf", &y[a]);
+	}
+	
+	suma=iloczynSkalarny(x,y,n);
+	
+	printf("Iloczyn skalarny podanych wektorow wynosi %lf", suma);	
+	
+}
+```
