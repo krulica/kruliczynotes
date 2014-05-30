@@ -30,14 +30,9 @@ int genDzien(int m){
     return d;
 }
 
-int wielokrotneSpacje(char odp[]){
+int zbedneSpacje(char odp[]){
 	int i,x;
-	
-	if (isspace(odp[0])) for(i=0; i<strlen(odp); i++){
-		odp[i]=odp[i+1];
-	 }
-	
-		
+				
 	for(i=0; i<strlen(odp); i++){
 		if (odp[i]==' ' && (odp[i+1]==' ')){
 		for(x=i; x<strlen(odp); x++){
@@ -47,6 +42,10 @@ int wielokrotneSpacje(char odp[]){
 		}
 		
 	}
+	
+	if (isspace(odp[0])) for(i=0; i<strlen(odp); i++){
+		odp[i]=odp[i+1];
+	 }
 	return 0;
 }
 
@@ -63,7 +62,7 @@ int main(){
         printf("Wpisz po angielsku date (miesiac i dzien) dla %d-%d:\n", m+1,d+1);
         gets(odp);
             
-	    wielokrotneSpacje(odp);
+	    zbedneSpacje(odp);
     
 	if (strcmp(model, odp)==0) (pkt=pkt+1), printf("Dobrze!\n");
     else printf("Zle! Prawidlowa odpowiedz to: %s \n", model); 
