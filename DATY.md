@@ -1,9 +1,6 @@
-DATY - zaliczeniowy
-=============
-
-###daty+funkcje-spacje
-
+### Daty - program zaliczeniowy
 ```
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
@@ -31,21 +28,24 @@ int genDzien(int m){
 }
 
 int zbedneSpacje(char odp[]){
-	int i,x;
-				
-	for(i=0; i<strlen(odp); i++){
-		if (odp[i]==' ' && (odp[i+1]==' ')){
-		for(x=i; x<strlen(odp); x++){
-			odp[x]=odp[x+1];
-			}
-		i--;
-		}
-		
-	}
-	
-	if (isspace(odp[0])) for(i=0; i<strlen(odp); i++){
-		odp[i]=odp[i+1];
-	 }
+    int i,x, koniec=strlen(odp);
+
+    for(i=0; i<strlen(odp); i++){
+        if (odp[i]==' ' && (odp[i+1]==' ')){
+        for(x=i; x<=strlen(odp); x++){
+            odp[x]=odp[x+1];
+            }
+        i--;
+        }
+
+    }
+
+    if (isspace(odp[0])) for(i=0; i<strlen(odp); i++){
+        odp[i]=odp[i+1];
+     }
+    koniec=strlen(odp)-1;
+    while (isspace(odp[koniec])) odp[koniec--]='\0';
+	//printf("#%s#\n",odp);
 	return 0;
 }
 
@@ -61,10 +61,10 @@ int main(){
         strcat(model,days[d]);
         printf("Wpisz po angielsku date (miesiac i dzien) dla %d-%d:\n", m+1,d+1);
         gets(odp);
-            
-	    zbedneSpacje(odp);
-    
-	if (strcmp(model, odp)==0) (pkt=pkt+1), printf("Dobrze!\n");
+
+        zbedneSpacje(odp);
+
+    if (strcmp(model, odp)==0) (pkt=pkt+1), printf("Dobrze!\n");
     else printf("Zle! Prawidlowa odpowiedz to: %s \n", model); 
     }
     printf("Ocena z odpowiedzi:%d", pkt+1);
