@@ -141,3 +141,36 @@ ORDER BY nazwisko, imie ASC
 SELECT imie, nazwisko, GETDATE() AS data, DATEDIFF(d, data_zatr,GETDATE()) AS liczba_dni
 FROM pracownik
 ORDER BY liczba_dni DESC
+
+--12.3
+SELECT marka,typ, DATEDIFF(yy, data_prod, GETDATE()) AS wiek
+FROM samochod
+ORDER BY wiek DESC
+
+--13.1
+SELECT LEFT(imie,1)+'.'+LEFT(nazwisko,1)+'.' AS inic, imie,nazwisko
+FROM pracownik
+ORDER BY inic, imie, nazwisko ASC 
+
+--13.2
+SELECT UPPER(LEFT(imie,1))+LOWER(RIGHT(imie,LEN(imie)-1)) AS imie, UPPER(LEFT(nazwisko,1))+LOWER(RIGHT(nazwisko,LEN(nazwisko)-1)) AS nazwisko
+FROM pracownik  
+
+--13.3
+SELECT imie, nazwisko, STUFF(nr_karty_kredyt,LEN(nr_karty_kredyt)-5,6,'xxxxxx') AS nr_kraty_kredyt
+FROM klient  
+
+--14.1
+UPDATE pracownik
+SET dodatek=50
+WHERE dodatek IS NULL
+
+--14.2
+UPDATE klient
+SET imie='Jerzy', nazwisko='Nowak'
+WHERE id_klient=10
+
+--14.3
+UPDATE pracownik
+SET dodatek=dodatek+100
+WHERE pensja<1500
