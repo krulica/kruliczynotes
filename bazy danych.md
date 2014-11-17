@@ -9,20 +9,21 @@ SELECT imie, nazwisko, dzial FROM pracownik
 SELECT imie, nazwisko, pensja FROM pracownik ORDER BY pensja DESC
 ##--2.2
 SELECT imie, nazwisko, pensja FROM pracownik ORDER BY nazwisko ASC, imie ASC
-##--2.3SELECT nazwisko, dzial, stanowisko FROM pracownik ORDER BY dzial ASC, stanowisko DESC
+##--2.3
+SELECT nazwisko, dzial, stanowisko FROM pracownik ORDER BY dzial ASC, stanowisko DESC
 
---3.1
+##--3.1
 SELECT DISTINCT dzial FROM pracownik
---3.2
+##--3.2
 SELECT DISTINCT dzial, stanowisko FROM pracownik
---3.3
+##--3.3
 SELECT DISTINCT dzial, stanowisko FROM pracownik ORDER BY dzial DESC, stanowisko DESC
 
---4.1
+##--4.1
 SELECT imie, nazwisko
 FROM pracownik
 WHERE imie='Jan';
---4.2
+##--4.2
 SELECT imie, nazwisko
 FROM pracownik
 WHERE stanowisko='sprzedawca'
