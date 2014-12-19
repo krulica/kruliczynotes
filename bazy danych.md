@@ -235,3 +235,9 @@ select k.imie,k.nazwisko, COUNT (w.id_wypozyczenie) as ilosc_wyp
 from klient k left join wypozyczenie w on k.id_klient=w.id_klient
 group by k.imie,k.nazwisko,k.id_klient
 order by ilosc_wyp desc
+
+20.2
+select s.id_samochod,s.marka,s.typ, COUNT(w.id_wypozyczenie) as ilosc_wyp
+from samochod s left join wypozyczenie w on s.id_samochod=w.id_samochod
+group by s.id_samochod,s.marka,s.typ
+order by ilosc_wyp asc
