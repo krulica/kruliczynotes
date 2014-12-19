@@ -268,3 +268,18 @@ from pracownik p join wypozyczenie w on p.id_pracownik=w.id_pracow_wyp
 group by p.nazwisko,p.imie
 having count(w.id_wypozyczenie)>=20
 order by COUNT(w.id_wypozyczenie),p.nazwisko,p.imie
+
+
+22.1
+select imie,nazwisko,pensja
+from pracownik
+where pensja=(select MAX(pensja) from pracownik)
+
+22.2
+select imie,nazwisko,pensja
+from pracownik
+where pensja>(select AVG(pensja) from pracownik)
+
+22.3
+select marka,typ,data_prod from samochod
+where data_prod=(select MIN(data_prod) from samochod)
