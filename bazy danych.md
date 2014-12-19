@@ -218,3 +218,6 @@ select m.ulica,m.numer,s.marka,s.typ
 from miejsce m inner join wypozyczenie w on m.id_miejsce=w.id_miejsca_wyp inner join samochod s on w.id_samochod=s.id_samochod
 order by m.ulica,m.numer,s.marka,s.typ asc
 
+18.3select s.id_samochod,s.marka,s.typ,k.imie,k.nazwisko
+from samochod s inner join wypozyczenie w on s.id_samochod=w.id_samochod inner join klient k on w.id_klient=k.id_klient
+order by s.id_samochod,k.nazwisko,k.imie asc
