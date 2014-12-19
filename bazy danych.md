@@ -247,3 +247,10 @@ select p.imie,p.nazwisko, COUNT(w.id_wypozyczenie) as ilosc_wyp
 from pracownik p left join wypozyczenie w  on p.id_pracownik=w.id_pracow_wyp
 group by p.imie,p.nazwisko
 order by ilosc_wyp desc
+
+21.1
+select k.imie,k.nazwisko, COUNT(w.id_wypozyczenie) as ilosc_wyp
+from klient k join wypozyczenie w on k.id_klient=w.id_klient
+group by k.imie,k.nazwisko
+having COUNT(w.id_wypozyczenie)>=2
+order by k.nazwisko,k.imie
