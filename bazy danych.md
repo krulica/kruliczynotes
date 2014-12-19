@@ -261,3 +261,10 @@ from samochod s join wypozyczenie w on s.id_samochod=w.id_samochod
 group by s.id_samochod,s.marka,s.typ
 having COUNT(w.id_wypozyczenie)>=5
 order by s.marka,s.typ
+
+21.3
+select p.imie,p.nazwisko, COUNT(w.id_wypozyczenie) as ilosc_wyp
+from pracownik p join wypozyczenie w on p.id_pracownik=w.id_pracow_wyp
+group by p.nazwisko,p.imie
+having count(w.id_wypozyczenie)>=20
+order by COUNT(w.id_wypozyczenie),p.nazwisko,p.imie
