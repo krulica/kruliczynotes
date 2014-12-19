@@ -221,3 +221,11 @@ order by m.ulica,m.numer,s.marka,s.typ asc
 18.3select s.id_samochod,s.marka,s.typ,k.imie,k.nazwisko
 from samochod s inner join wypozyczenie w on s.id_samochod=w.id_samochod inner join klient k on w.id_klient=k.id_klient
 order by s.id_samochod,k.nazwisko,k.imie asc
+
+19.1,2 i3
+
+select MAX(pensja) from pracownik 
+
+select AVG(pensja) from pracownik
+
+select MIN(data_prod) from samochod
