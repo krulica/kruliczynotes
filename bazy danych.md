@@ -174,3 +174,23 @@ WHERE id_klient=10
 UPDATE pracownik
 SET dodatek=dodatek+100
 WHERE pensja<1500
+
+--15.1
+delete from klient
+--where id_klient=17
+
+--15.2
+delete from wypozyczenie
+--where id_klient=17
+
+--15.3
+delete from samochod
+--where przebieg>60000
+
+
+--16.1
+insert into klient(id_klient,imie,nazwisko,ulica,numer,miasto,kod,telefon)
+--values (121,'Adam','Cichy','Korzenna','12','Warszawa',00-950,'123-456-321')
+
+--16.2insert into samochod (id_samochod,marka,typ,data_prod,kolor,poj_silnika,przebieg)
+--values (50,'Skoda','Octavia','2012-09-01','srebrny',1986,5000)
