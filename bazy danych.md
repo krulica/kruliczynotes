@@ -194,3 +194,17 @@ insert into klient(id_klient,imie,nazwisko,ulica,numer,miasto,kod,telefon)
 
 --16.2insert into samochod (id_samochod,marka,typ,data_prod,kolor,poj_silnika,przebieg)
 --values (50,'Skoda','Octavia','2012-09-01','srebrny',1986,5000)
+
+17.1SELECT s.id_samochod, s.marka, s.typ, w.data_wyp, w.data_odd
+from samochod s inner join wypozyczenie w on s.id_samochod=w.id_samochod
+where w.data_odd is Null
+
+17.2select k.imie,k.nazwisko,w.id_samochod,w.data_wyp
+from klient k inner join wypozyczenie w on k.id_klient=w.id_klient
+where w.data_odd is null
+order by k.nazwisko,k.imie asc
+
+17.3select k.imie,k.nazwisko,w.data_wyp,w.kaucja
+from klient k inner join wypozyczenie w on k.id_klient=w.id_klient
+where w.kaucja is not null
+
