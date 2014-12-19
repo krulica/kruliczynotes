@@ -229,3 +229,9 @@ select MAX(pensja) from pracownik
 select AVG(pensja) from pracownik
 
 select MIN(data_prod) from samochod
+
+20.1
+select k.imie,k.nazwisko, COUNT (w.id_wypozyczenie) as ilosc_wyp
+from klient k left join wypozyczenie w on k.id_klient=w.id_klient
+group by k.imie,k.nazwisko,k.id_klient
+order by ilosc_wyp desc
