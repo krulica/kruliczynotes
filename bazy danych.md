@@ -208,3 +208,13 @@ order by k.nazwisko,k.imie asc
 from klient k inner join wypozyczenie w on k.id_klient=w.id_klient
 where w.kaucja is not null
 
+18.1select k.imie,k.nazwisko,w.data_wyp,s.marka,s.typ
+--from klient k inner join wypozyczenie w on k.id_klient=w.id_klient inner join samochod s on w.id_samochod=s.id_samochod
+--order by k.nazwisko,k.imie,s.marka,s.typ asc
+
+18.2
+
+select m.ulica,m.numer,s.marka,s.typ
+from miejsce m inner join wypozyczenie w on m.id_miejsce=w.id_miejsca_wyp inner join samochod s on w.id_samochod=s.id_samochod
+order by m.ulica,m.numer,s.marka,s.typ asc
+
