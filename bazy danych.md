@@ -453,4 +453,18 @@ union all
 select nazwisko,imie from pracownik
 order by nazwisko,imie
 ```
+####27.2
+```
+select imie,nazwisko from klient
+intersect
+select imie,nazwisko from pracownik
+order by nazwisko,imie
+```
 
+####27.3
+```
+select imie,nazwisko from klient
+except
+select imie,nazwisko from pracownik
+order by nazwisko,imie
+```
