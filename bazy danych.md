@@ -7,10 +7,11 @@ SELECT * FROM pracownik
 SELECT imie FROM pracownik
 ```
 ####1.3
+```
 SELECT imie, nazwisko, dzial FROM pracownik
-
+```
 ####2.1
-SELECT imie, nazwisko, pensja FROM pracownik ORDER BY pensja DESC
+```SELECT imie, nazwisko, pensja FROM pracownik ORDER BY pensja DESC```
 ####2.2
 SELECT imie, nazwisko, pensja FROM pracownik ORDER BY nazwisko ASC, imie ASC
 ####2.3
