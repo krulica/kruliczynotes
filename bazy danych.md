@@ -27,30 +27,30 @@ WHERE imie='Jan';
 SELECT imie, nazwisko
 FROM pracownik
 WHERE stanowisko='sprzedawca'
---4.3
+####4.3
 SELECT imie, nazwisko, pensja
 FROM pracownik
 WHERE pensja>1500
 ORDER BY pensja DESC;
---5.1
+####5.1
 SELECT imie,nazwisko,dzial,stanowisko
 FROM pracownik
 WHERE dzial='obsługa klienta' AND stanowisko='sprzedawca'
---5.2
+####5.2
 SELECT imie, nazwisko, dzial, stanowisko
 FROM pracownik
 WHERE dzial='techniczny' AND (stanowisko='kierownik' OR stanowisko='sprzedawca')
---5.3
+####5.3
 SELECT *
 FROM samochod
 WHERE marka!='fiat' AND marka!='ford'
 
---6.1
+####6.1
 SELECT *
 FROM samochod
 WHERE marka IN ('mercedes', 'seat', 'opel')
 
---6.2
+####6.2
 SELECT imie, nazwisko, data_zatr
 FROM pracownik
 WHERE imie IN ('Anna', 'Marzena', 'Alicja')
