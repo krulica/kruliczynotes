@@ -371,3 +371,34 @@ order by il_wyp desc
 )
 order by s.marka,s.typ asc
 ```
+####24.2
+```
+select imie,nazwisko from pracownik
+where id_pracownik not in (select distinct id_pracow_wyp from wypozyczenie)
+
+select k.id_klient,k.nazwisko,k.imie
+from klient k right join wypozyczenie w on k.id_klient=w.id_klient
+group by k.id_klient,k.nazwisko,k.imie
+having COUNT(w.id_klient)=
+(
+select top 1 COUNT(w.id_klient) as il_wyp
+from wypozyczenie w
+group by w.id_klient
+order by il_wyp asc
+)
+order by k.id_klient,k.nazwisko,k.imie asc
+```
+####24.3
+```
+select p.id_pracownik,p.nazwisko,p.imie
+from pracownik p inner join wypozyczenie w on p.id_pracownik=w.id_pracow_wyp
+group by p.id_pracownik,p.nazwisko,p.imie
+having COUNT(w.id_pracow_wyp)=
+(
+select TOp 1 count(w.id_pracow_wyp) as il_wyp
+from wypozyczenie w
+group by w.id_pracow_wyp
+order by il_wyp asc
+)
+order by p.nazwisko,p.imie
+```
