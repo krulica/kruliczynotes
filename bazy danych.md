@@ -408,3 +408,10 @@ UPDATE pracownik
 set pensja=pensja*1.1
 where pensja<(select AVG(pensja) from pracownik)
 ```
+####25.2
+```
+update pracownik
+set dodatek=dodatek+10
+where id_pracownik in
+(select distinct id_pracow_wyp from wypozyczenie where (MONTH(data_wyp)=5))
+```
