@@ -341,3 +341,8 @@ where pensja>(select AVG(pensja) from pracownik)
 select marka,typ,data_prod from samochod
 where data_prod=(select MIN(data_prod) from samochod)
 ```
+####23.1
+```
+select marka,typ,data_prod from samochod
+where id_samochod not in (select distinct id_samochod from wypozyczenie)
+```
