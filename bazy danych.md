@@ -44,24 +44,29 @@ FROM pracownik
 WHERE dzial='obsługa klienta' AND stanowisko='sprzedawca'
 ```
 ####5.2
+```
 SELECT imie, nazwisko, dzial, stanowisko
 FROM pracownik
 WHERE dzial='techniczny' AND (stanowisko='kierownik' OR stanowisko='sprzedawca')
+```
 ####5.3
+```
 SELECT *
 FROM samochod
 WHERE marka!='fiat' AND marka!='ford'
-
+```
 ####6.1
+```
 SELECT *
 FROM samochod
 WHERE marka IN ('mercedes', 'seat', 'opel')
-
+```
 ####6.2
+```
 SELECT imie, nazwisko, data_zatr
 FROM pracownik
 WHERE imie IN ('Anna', 'Marzena', 'Alicja')
-
+```
 ####6.3
 SELECT imie, nazwisko, miasto
 FROM klient
