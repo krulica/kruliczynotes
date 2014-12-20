@@ -439,14 +439,14 @@ where id_samochod not in
 delete from pracownik 
 where id_pracownik not in (select distinct id_pracow_wyp from wypozyczenie)
 ```
-####27.1
+####27.1a
 ```
 select nazwisko,imie from klient
 union
 select nazwisko,imie from pracownik
 order by nazwisko,imie
 ```
-####27.2
+####27.1b
 ```select nazwisko,imie from klient
 union all
 select nazwisko,imie from pracownik
