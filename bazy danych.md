@@ -447,7 +447,8 @@ select nazwisko,imie from pracownik
 order by nazwisko,imie
 ```
 ####27.1b
-```select nazwisko,imie from klient
+```
+select nazwisko,imie from klient
 union all
 select nazwisko,imie from pracownik
 order by nazwisko,imie
