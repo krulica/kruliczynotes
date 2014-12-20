@@ -1,9 +1,11 @@
 ####1.1
-'''
+```
 SELECT * FROM pracownik
-'''
+```
 ####1.2
+```
 SELECT imie FROM pracownik
+```
 ####1.3
 SELECT imie, nazwisko, dzial FROM pracownik
 
@@ -35,9 +37,11 @@ FROM pracownik
 WHERE pensja>1500
 ORDER BY pensja DESC;
 ####5.1
+```
 SELECT imie,nazwisko,dzial,stanowisko
 FROM pracownik
 WHERE dzial='obsługa klienta' AND stanowisko='sprzedawca'
+```
 ####5.2
 SELECT imie, nazwisko, dzial, stanowisko
 FROM pracownik
