@@ -373,9 +373,6 @@ order by s.marka,s.typ asc
 ```
 ####24.2
 ```
-select imie,nazwisko from pracownik
-where id_pracownik not in (select distinct id_pracow_wyp from wypozyczenie)
-
 select k.id_klient,k.nazwisko,k.imie
 from klient k right join wypozyczenie w on k.id_klient=w.id_klient
 group by k.id_klient,k.nazwisko,k.imie
