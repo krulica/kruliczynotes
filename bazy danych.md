@@ -346,3 +346,9 @@ where data_prod=(select MIN(data_prod) from samochod)
 select marka,typ,data_prod from samochod
 where id_samochod not in (select distinct id_samochod from wypozyczenie)
 ```
+select imie,nazwisko from klient
+where id_klient not in (select distinct id_klient from wypozyczenie)
+order by nazwisko,imie asc
+
+select imie,nazwisko from pracownik
+where id_pracownik not in (select distinct id_pracow_wyp from wypozyczenie)
