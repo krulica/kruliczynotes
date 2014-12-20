@@ -132,85 +132,99 @@ SELECT imie, nazwisko, pensja, COALESCE(dodatek, '0') AS dodatek, COALESCE (doda
 FROM pracownik
 ```
 ####10.2
+```
 SELECT imie, nazwisko, pensja*1.5 AS pensja
 FROM pracownik
-
+```
 ####10.3
+```
 SELECT imie, nazwisko, COALESCE (dodatek, '0')+pensja AS do_zaplaty, ((COALESCE (dodatek, '0')+pensja)*0.01) AS procent
 FROM pracownik
-
+```
 ####11.1
+```
 SELECT TOP 1 imie, nazwisko 
 FROM pracownik
 ORDER BY data_zatr ASC
-
+```
 ####11.2
+```
 SELECT TOP 5 imie, nazwisko
 FROM pracownik
 ORDER BY nazwisko,imie ASC
-
+```
 ####11.3
+```
 SELECT TOP 1 *
 FROM wypozyczenie
 ORDER BY data_wyp DESC
-
+```
 ####12.1
+```
 SELECT imie, nazwisko, data_zatr
 FROM pracownik
 WHERE (MONTH(data_zatr)=5)
 ORDER BY nazwisko, imie ASC 
-
+```
 ####12.2
+```
 SELECT imie, nazwisko, GETDATE() AS data, DATEDIFF(d, data_zatr,GETDATE()) AS liczba_dni
 FROM pracownik
 ORDER BY liczba_dni DESC
-
+```
 ####12.3
+```
 SELECT marka,typ, DATEDIFF(yy, data_prod, GETDATE()) AS wiek
 FROM samochod
 ORDER BY wiek DESC
-
+```
 ####13.1
+```
 SELECT LEFT(imie,1)+'.'+LEFT(nazwisko,1)+'.' AS inic, imie,nazwisko
 FROM pracownik
 ORDER BY inic, imie, nazwisko ASC 
-
+```
 ####13.2
+```
 SELECT UPPER(LEFT(imie,1))+LOWER(RIGHT(imie,LEN(imie)-1)) AS imie, UPPER(LEFT(nazwisko,1))+LOWER(RIGHT(nazwisko,LEN(nazwisko)-1)) AS nazwisko
 FROM pracownik  
-
+```
 ####13.3
+```
 SELECT imie, nazwisko, STUFF(nr_karty_kredyt,LEN(nr_karty_kredyt)-5,6,'xxxxxx') AS nr_kraty_kredyt
 FROM klient  
-
+```
 ####14.1
+```
 UPDATE pracownik
 SET dodatek=50
 WHERE dodatek IS NULL
-
+```
 ####14.2
+```
 UPDATE klient
 SET imie='Jerzy', nazwisko='Nowak'
 WHERE id_klient=10
-
+```
 ####14.3
+```
 UPDATE pracownik
 SET dodatek=dodatek+100
 WHERE pensja<1500
-
+```
 ####15.1
+```
 delete from klient
 where id_klient=17
-
+```
 ####15.2
 delete from wypozyczenie
 where id_klient=17
-
+```
 ####15.3
 delete from samochod
 where przebieg>60000
-
-
+```
 ####16.1
 insert into klient(id_klient,imie,nazwisko,ulica,numer,miasto,kod,telefon)
 values (121,'Adam','Cichy','Korzenna','12','Warszawa',00-950,'123-456-321')
