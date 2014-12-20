@@ -402,3 +402,9 @@ order by il_wyp asc
 )
 order by p.nazwisko,p.imie
 ```
+####25.1
+```
+UPDATE pracownik
+set pensja=pensja*1.1
+where pensja<(select AVG(pensja) from pracownik)
+```
