@@ -446,3 +446,10 @@ union
 select nazwisko,imie from pracownik
 order by nazwisko,imie
 ```
+####27.2
+```select nazwisko,imie from klient
+union all
+select nazwisko,imie from pracownik
+order by nazwisko,imie
+```
+
