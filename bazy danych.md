@@ -422,3 +422,9 @@ set pensja=0.95*pensja
 where id_pracownik not in
 (select distinct id_pracow_wyp from wypozyczenie where(YEAR(data_wyp)=1999))
 ```
+####26.1
+```
+delete from klient
+where id_klient not in
+(select distinct id_klient from wypozyczenie)
+```
