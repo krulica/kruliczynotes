@@ -346,9 +346,28 @@ where data_prod=(select MIN(data_prod) from samochod)
 select marka,typ,data_prod from samochod
 where id_samochod not in (select distinct id_samochod from wypozyczenie)
 ```
+####23.2
+```
 select imie,nazwisko from klient
 where id_klient not in (select distinct id_klient from wypozyczenie)
 order by nazwisko,imie asc
-
+```
+####23.3
+```
 select imie,nazwisko from pracownik
 where id_pracownik not in (select distinct id_pracow_wyp from wypozyczenie)
+```
+####24.1
+```
+select s.id_samochod,s.marka,s.typ
+from samochod s inner join wypozyczenie w on s.id_samochod=w.id_samochod
+group by s.id_samochod,s.marka,s.typ
+having COUNT(w.id_samochod)=
+(
+select top 1 COUNT(w.id_samochod) as il_wyp
+from wypozyczenie w 
+group by w.id_samochod
+order by il_wyp desc
+)
+order by s.marka,s.typ asc
+```
