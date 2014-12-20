@@ -434,3 +434,8 @@ delete from samochod
 where id_samochod not in
 (select distinct id_samochod from wypozyczenie)
 ```
+####26.3
+```
+delete from pracownik 
+where id_pracownik not in (select distinct id_pracow_wyp from wypozyczenie)
+```
