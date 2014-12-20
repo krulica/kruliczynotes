@@ -68,58 +68,69 @@ FROM pracownik
 WHERE imie IN ('Anna', 'Marzena', 'Alicja')
 ```
 ####6.3
+```
 SELECT imie, nazwisko, miasto
 FROM klient
 WHERE miasto NOT IN ('Warszawa', 'Wrocław')
-
+```
 ####7.1
+```
 SELECT imie, nazwisko
 FROM klient
 WHERE nazwisko LIKE '%k%'
-
+```
 ####7.2
+```
 SELECT imie, nazwisko
 FROM klient
 WHERE nazwisko LIKE 'D%ski'
-
+```
 ####7.3
+```
 SELECT imie, nazwisko
 FROM klient
 WHERE nazwisko LIKE '_o%' OR nazwisko LIKE '_a%'
-
+```
 ####8.1
+```
 SELECT *
 FROM samochod
 WHERE poj_silnika BETWEEN 1100 AND 1600
-
+```
 ####8.2
+```
 SELECT *
 FROM pracownik
 WHERE data_zatr BETWEEN '1997-01-01' AND '1997-12-31'
-
+```
 ####8.3
+```
 SELECT *
 FROM samochod
 WHERE (przebieg BETWEEN 10000 AND 20000) OR (przebieg BETWEEN 30000 AND 40000)
-
+```
 ####9.1
+```
 SELECT *
 FROM pracownik
 WHERE dodatek IS NULL
-
+```
 ####9.2
+```
 SELECT *
 FROM klient
 WHERE nr_karty_kredyt IS NOT NULL
-
+```
 ####9.3
+```
 SELECT imie, nazwisko, COALESCE(dodatek, '0') AS dodatek
 FROM pracownik
-
+```
 ####10.1
+```
 SELECT imie, nazwisko, pensja, COALESCE(dodatek, '0') AS dodatek, COALESCE (dodatek, '0')+pensja AS do_zaplaty
 FROM pracownik
-
+```
 ####10.2
 SELECT imie, nazwisko, pensja*1.5 AS pensja
 FROM pracownik
