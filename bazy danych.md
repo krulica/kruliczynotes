@@ -415,3 +415,10 @@ set dodatek=dodatek+10
 where id_pracownik in
 (select distinct id_pracow_wyp from wypozyczenie where (MONTH(data_wyp)=5))
 ```
+####25.3
+```
+update pracownik
+set pensja=0.95*pensja
+where id_pracownik not in
+(select distinct id_pracow_wyp from wypozyczenie where(YEAR(data_wyp)=1999))
+```
