@@ -183,86 +183,90 @@ delete from klient
 delete from wypozyczenie
 --where id_klient=17
 
---15.3
+####15.3
 delete from samochod
---where przebieg>60000
+where przebieg>60000
 
 
---16.1
+####16.1
 insert into klient(id_klient,imie,nazwisko,ulica,numer,miasto,kod,telefon)
---values (121,'Adam','Cichy','Korzenna','12','Warszawa',00-950,'123-456-321')
+values (121,'Adam','Cichy','Korzenna','12','Warszawa',00-950,'123-456-321')
 
---16.2insert into samochod (id_samochod,marka,typ,data_prod,kolor,poj_silnika,przebieg)
---values (50,'Skoda','Octavia','2012-09-01','srebrny',1986,5000)
+####16.2
+insert into samochod (id_samochod,marka,typ,data_prod,kolor,poj_silnika,przebieg)
+values (50,'Skoda','Octavia','2012-09-01','srebrny',1986,5000)
 
-17.1SELECT s.id_samochod, s.marka, s.typ, w.data_wyp, w.data_odd
+####17.1
+SELECT s.id_samochod, s.marka, s.typ, w.data_wyp, w.data_odd
 from samochod s inner join wypozyczenie w on s.id_samochod=w.id_samochod
 where w.data_odd is Null
 
-17.2select k.imie,k.nazwisko,w.id_samochod,w.data_wyp
+####17.2
+select k.imie,k.nazwisko,w.id_samochod,w.data_wyp
 from klient k inner join wypozyczenie w on k.id_klient=w.id_klient
 where w.data_odd is null
 order by k.nazwisko,k.imie asc
 
-17.3select k.imie,k.nazwisko,w.data_wyp,w.kaucja
+####17.3
+select k.imie,k.nazwisko,w.data_wyp,w.kaucja
 from klient k inner join wypozyczenie w on k.id_klient=w.id_klient
 where w.kaucja is not null
 
-18.1select k.imie,k.nazwisko,w.data_wyp,s.marka,s.typ
+####18.1
+select k.imie,k.nazwisko,w.data_wyp,s.marka,s.typ
 --from klient k inner join wypozyczenie w on k.id_klient=w.id_klient inner join samochod s on w.id_samochod=s.id_samochod
 --order by k.nazwisko,k.imie,s.marka,s.typ asc
 
-18.2
+####18.2
 
 select m.ulica,m.numer,s.marka,s.typ
 from miejsce m inner join wypozyczenie w on m.id_miejsce=w.id_miejsca_wyp inner join samochod s on w.id_samochod=s.id_samochod
 order by m.ulica,m.numer,s.marka,s.typ asc
 
-18.3select s.id_samochod,s.marka,s.typ,k.imie,k.nazwisko
+####18.3select s.id_samochod,s.marka,s.typ,k.imie,k.nazwisko
 from samochod s inner join wypozyczenie w on s.id_samochod=w.id_samochod inner join klient k on w.id_klient=k.id_klient
 order by s.id_samochod,k.nazwisko,k.imie asc
 
-19.1,2 i3
-
+####19.1
 select MAX(pensja) from pracownik 
-
+####19.2
 select AVG(pensja) from pracownik
-
+####19.3
 select MIN(data_prod) from samochod
 
-20.1
+####20.1
 select k.imie,k.nazwisko, COUNT (w.id_wypozyczenie) as ilosc_wyp
 from klient k left join wypozyczenie w on k.id_klient=w.id_klient
 group by k.imie,k.nazwisko,k.id_klient
 order by ilosc_wyp desc
 
-20.2
+####20.2
 select s.id_samochod,s.marka,s.typ, COUNT(w.id_wypozyczenie) as ilosc_wyp
 from samochod s left join wypozyczenie w on s.id_samochod=w.id_samochod
 group by s.id_samochod,s.marka,s.typ
 order by ilosc_wyp asc
 
-20.3
+####20.3
 select p.imie,p.nazwisko, COUNT(w.id_wypozyczenie) as ilosc_wyp
 from pracownik p left join wypozyczenie w  on p.id_pracownik=w.id_pracow_wyp
 group by p.imie,p.nazwisko
 order by ilosc_wyp desc
 
-21.1
+####21.1
 select k.imie,k.nazwisko, COUNT(w.id_wypozyczenie) as ilosc_wyp
 from klient k join wypozyczenie w on k.id_klient=w.id_klient
 group by k.imie,k.nazwisko
 having COUNT(w.id_wypozyczenie)>=2
 order by k.nazwisko,k.imie
 
-21.2
+####21.2
 select s.id_samochod,s.marka,s.typ, COUNT(w.id_wypozyczenie) as ilosc_wyp
 from samochod s join wypozyczenie w on s.id_samochod=w.id_samochod
 group by s.id_samochod,s.marka,s.typ
 having COUNT(w.id_wypozyczenie)>=5
 order by s.marka,s.typ
 
-21.3
+####21.3
 select p.imie,p.nazwisko, COUNT(w.id_wypozyczenie) as ilosc_wyp
 from pracownik p join wypozyczenie w on p.id_pracownik=w.id_pracow_wyp
 group by p.nazwisko,p.imie
@@ -270,16 +274,16 @@ having count(w.id_wypozyczenie)>=20
 order by COUNT(w.id_wypozyczenie),p.nazwisko,p.imie
 
 
-22.1
+####22.1
 select imie,nazwisko,pensja
 from pracownik
 where pensja=(select MAX(pensja) from pracownik)
 
-22.2
+####22.2
 select imie,nazwisko,pensja
 from pracownik
 where pensja>(select AVG(pensja) from pracownik)
 
-22.3
+####22.3
 select marka,typ,data_prod from samochod
 where data_prod=(select MIN(data_prod) from samochod)
