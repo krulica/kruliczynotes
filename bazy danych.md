@@ -465,3 +465,7 @@ except
 select imie,nazwisko from pracownik
 order by nazwisko,imie
 ```
+SELECT a.miejscowosc, COUNT(*) as ile_miesz
+FROM adres a LEFT JOIN klient k ON a.id_adres=k.id_adres
+GROUP BY a.miejscowosc
+ORDER BY ile_miesz DESC, a.miejscowosc ASC
